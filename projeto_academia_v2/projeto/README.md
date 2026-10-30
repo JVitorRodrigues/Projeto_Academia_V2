@@ -90,4 +90,5 @@ config.properties.example   modelo de configuração (sem segredos)
 ```
 
 ## Capturas de tela
-_Adicione aqui as imagens: login, matrículas, relatório (HIT e MISS), Table Editor do Supabase e Upstash Data Browser._
+
+## Link do vídeo: 
