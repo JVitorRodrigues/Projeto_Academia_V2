@@ -89,6 +89,35 @@ Login: `admin` / `admin123`.
 config.properties.example   modelo de configuração (sem segredos)
 ```
 
-## Capturas de tela
+## Capturas de tela 
+### Aplicação (Java Swing)
+
+**1. Login** — acesso protegido por usuário e senha, com bloqueio temporário controlado pelo Redis.
+![Login](docs/prints/01_login.png)
+
+**2. Menu principal** — acesso a alunos, instrutores, planos, matrículas e ao relatório financeiro.
+![Menu](docs/prints/02_menu.png)
+
+**3. Matrículas (View + Function + Procedure)** — a tabela é lida da view `vw_matriculas_detalhadas` (com situação e total pago); o *valor final* de R$ 809,91 é calculado pela function `fn_valor_final_plano` no banco; os botões *Matricular* e *Cancelar matrícula* chamam as procedures.
+![Matrículas](docs/prints/03_matriculas.png)
+
+**4. Relatório Financeiro (Supabase + Redis)** — dados da view `vw_resumo_por_plano`. A linha laranja mostra **cache MISS**: a consulta foi ao Supabase (1214 ms) e o resultado foi salvo no Redis por 60 s.
+![Relatório - cache MISS](docs/prints/04_relatorio_cache_miss.png)
+
+### Integração com o Supabase
+
+**5. Cadastro de instrutor na aplicação** — o instrutor *Roberto Alves* é cadastrado pela interface.
+![Instrutor cadastrado](docs/prints/05_instrutor_cadastrado.png)
+
+**6. Table Editor do Supabase (tabela `instrutores`)** — o mesmo registro, *Roberto Alves*, aparece gravado no banco na nuvem, o que comprova a comunicação entre a aplicação e o Supabase. Na lateral, estão as tabelas e as duas views do sistema.
+![Supabase - instrutores](docs/prints/06_supabase_instrutores.png)
+
+**7. Table Editor do Supabase (tabela `alunos`)** — alunos de exemplo e um aluno cadastrado pela aplicação.
+![Supabase - alunos](docs/prints/07_supabase_alunos.png)
+
+### Integração com o Redis
+
+**8. Painel do Upstash (aba Uso)** — o banco Redis `academia` (região São Paulo, plano gratuito) já registra comandos recebidos da aplicação (6 no momento da captura), o que comprova que a conexão com o Redis está ativa.
+![Upstash - uso](docs/prints/08_upstash_uso.png)
 
 ## Link do vídeo: 
