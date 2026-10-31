@@ -122,3 +122,6 @@ config.properties.example   modelo de configuração (sem segredos)
 
 ## Link do vídeo: 
 https://drive.google.com/file/d/1rx-vBGw4irm1yYLhBGFGTrrZCZIGBu9_/view?usp=sharing
+
+## Link do vídeo compactado:
+https://drive.google.com/file/d/1DQHsLVGHWcTlWKsGdjhu1YA3soSZPiCe/view?usp=drive_link
