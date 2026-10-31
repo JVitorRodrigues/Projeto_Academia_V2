@@ -121,3 +121,4 @@ config.properties.example   modelo de configuração (sem segredos)
 ![Upstash - uso](docs/prints/08_upstash_uso.png)
 
 ## Link do vídeo: 
+https://drive.google.com/file/d/1rx-vBGw4irm1yYLhBGFGTrrZCZIGBu9_/view?usp=sharing
